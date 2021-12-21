@@ -1,0 +1,9 @@
+Model	Test RMSE
+Linear regression	7.038693064970523
+Ridge regression	7.051498849880835
+Lasso regression	7.052505653264328
+Elastic net regression	7.051498849880835
+Decision tree	7.130317391406691
+Random forest	7.2170036422519095
+Boosting	7.136821708127648
+Intercept-only	7.950205950847888

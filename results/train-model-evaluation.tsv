@@ -1,0 +1,8 @@
+Model	Train RMSE
+Linear regression	7.034751558526817
+Ridge regression	7.047804533697781
+Lasso regression	7.0490804310975355
+Elastic net regression	7.047804533697781
+Decision tree	7.115421971210142
+Random forest	7.180189834487419
+Boosting	7.14462208748345

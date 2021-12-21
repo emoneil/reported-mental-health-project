@@ -1,0 +1,6 @@
+.DS_Store
+data/raw/brfss_2019_raw.xpt
+data/raw/LLCP2019XPT.zip
+results/lm_fit.Rda
+results/rf_fit_default.Rda
+results/rf_fit_tuned.Rda
