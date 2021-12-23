@@ -77,9 +77,8 @@ png(width = 7,
     res = 300,
     units = "in", 
     filename = "../results/optimal-tree-plot.png")
-rpart.plot(optimal_tree)
+rpart.plot(optimal_tree, tweak = 1.2)
 dev.off()
-
 
 # train a random forest with default settings on `mental_health_train`
 set.seed(1)

@@ -21,7 +21,7 @@ cols_missing <- function(df){ # helper function
 cols_missing_ca = brfss_2019_raw_ca %>% cols_missing(.)
 cols_missing_ca_names = names(brfss_2019_raw_ca[,cols_missing_ca])
 
-# ensuring as many states are in the original dataset are represented
+# ensure as many states are in the original dataset are represented
 # select california data
 brfss_ca = brfss_2019_raw %>% 
   dplyr::select(`_STATE`, `_URBSTAT`, MENTHLTH, HLTHPLN1, MEDCOST, CHECKUP1, 

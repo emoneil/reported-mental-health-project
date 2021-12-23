@@ -134,7 +134,7 @@ response_by_race = mental_health_train %>%
   ggplot(aes(x = race, y = mental_health, fill = race)) + 
   geom_boxplot() +
   labs(x = "Race", 
-       y = "Days Mental Health Not Good") + 
+       y = "Number of days mental health not good") + 
   scale_x_discrete(labels=c("White", "Black", "AI or AN", "Asian", "PI", 
                             "Other", "Multiracial", "Hispanic")) +
   theme_bw() + theme(legend.position = "none")
@@ -145,7 +145,7 @@ response_by_gender = mental_health_train %>%
   ggplot(aes(x = sex, y = mental_health, fill = sex)) + 
   geom_boxplot() +
   labs(x = "Gender", 
-       y = "Days Mental Health Not Good") + 
+       y = "Number of days mental health not good") + 
   scale_x_discrete(labels=c("Male", "Female")) +
   theme_bw() + theme(legend.position = "none")
 
@@ -169,7 +169,7 @@ mental_health_train %>%
   geom_violin() + geom_boxplot(width=0.1) + 
   scale_fill_brewer(palette="OrRd") + 
   xlab("Whether Could Not See Doctor Because of Cost") + 
-  ylab("Days Mental Health Not Good") +
+  ylab("Number of days mental health not good") +
   scale_x_discrete(labels=c("Yes, barrier of cost", 
                             "No, not barrier of cost")) +
   theme(legend.position="none") +
@@ -283,7 +283,7 @@ response_by_depression = mental_health_train %>%
   ggplot(aes(x = depression, y = mental_health, fill = depression)) + 
   geom_boxplot() +
   labs(x = "Whether ever told had a depressive disorder", 
-       y = "Days mental health not good") + 
+       y = "Number of days mental health not good") + 
   scale_x_discrete(labels=c("Yes", "No", "Don’t know/\nNot sure", "Refused")) +
   theme_bw() + theme(legend.position = "none")
 
@@ -298,7 +298,7 @@ response_by_age = mental_health_train %>%
   ggplot(aes(x = age, y = mental_health, fill = age)) + 
   geom_boxplot() +
   labs(x = "Age", 
-       y = "Days mental health not good") + 
+       y = "Number of days mental health not good") + 
   scale_x_discrete(labels=c("18 to 24", "25 to 29", "30 to 34", "35 to 39",
                             "40 to 44", "45 to 49", "50 to 54", "55 to 59", 
                             "60 to 64", "65 to 69", "70 to 74", "75 to 79",
@@ -329,10 +329,10 @@ bmi_by_high_blood_pressure = mental_health_train %>%
   geom_boxplot() +
   labs(x = "Whether ever told high blood pressure", 
        y = "BMI") + 
-  scale_x_discrete(labels=c("Yes", "Yes, female, only pregnancy", 
-                            "No", "Borderline high\nor pre-hypertensive", 
-                            "Don’t know/Not Sure", "Refused")) +
-  theme_bw() + theme(legend.position = "none")
+  scale_x_discrete(labels=c("Yes", "Yes, female,\nonly pregnancy", 
+                            "No", "Borderline\nhigh or\npre-hypertensive", 
+                            "Don’t know/\nNot Sure", "Refused")) +
+  theme_bw(base_size = 13) + theme(legend.position = "none")
 
 # bmi and diabetes
 bmi_by_diabetes = mental_health_train %>%
@@ -340,10 +340,10 @@ bmi_by_diabetes = mental_health_train %>%
   geom_boxplot() +
   labs(x = "Whether ever told had diabetes", 
        y = "BMI") + 
-  scale_x_discrete(labels=c("Yes", "Yes, female, only pregnancy", 
+  scale_x_discrete(labels=c("Yes", "Yes, female,\nonly pregnancy", 
                             "No", "No, pre-diabetes\nor borderline", 
-                            "Don’t know/Not Sure", "Refused")) +
-  theme_bw() + theme(legend.position = "none")
+                            "Don’t know/\nNot Sure", "Refused")) +
+  theme_bw(base_size = 13) + theme(legend.position = "none")
 
 # physical health and high blood pressure
 physical_health_by_high_blood_pressure = mental_health_train %>%
@@ -352,10 +352,10 @@ physical_health_by_high_blood_pressure = mental_health_train %>%
   geom_boxplot() +
   labs(x = "Whether ever told high blood pressure", 
        y = "Number of days physical health not good") + 
-  scale_x_discrete(labels=c("Yes", "Yes, female, only pregnancy", 
-                            "No", "Borderline high\nor pre-hypertensive", 
-                            "Don’t know/Not Sure", "Refused")) +
-  theme_bw() + theme(legend.position = "none")
+  scale_x_discrete(labels=c("Yes", "Yes, female,\nonly pregnancy", 
+                            "No", "Borderline\nhigh or\npre-hypertensive", 
+                            "Don’t know/\nNot Sure", "Refused")) +
+  theme_bw(base_size = 13) + theme(legend.position = "none")
 
 # physical health and diabetes
 physical_health_by_diabetes = mental_health_train %>%
@@ -363,10 +363,10 @@ physical_health_by_diabetes = mental_health_train %>%
   geom_boxplot() +
   labs(x = "Whether ever told had diabetes", 
        y = "Number of days physical health not good") + 
-  scale_x_discrete(labels=c("Yes", "Yes, female, only pregnancy", 
+  scale_x_discrete(labels=c("Yes", "Yes, female,\nonly pregnancy", 
                             "No", "No, pre-diabetes\nor borderline", 
-                            "Don’t know/Not Sure", "Refused")) +
-  theme_bw() + theme(legend.position = "none")
+                            "Don’t know/\nNot Sure", "Refused")) +
+  theme_bw(base_size = 13) + theme(legend.position = "none")
 
 png(width = 15, 
     height = 10,
